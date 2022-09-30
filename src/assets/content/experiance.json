@@ -1,0 +1,34 @@
+[{
+    "workplace": "New Company",
+    "role": "Sr. Software Engineer",
+    "start": "2022",
+    "end": "present",
+    "summery": "I have joined New Company on a part-time basis to support projects with narrow deadlines.",
+    "work": [
+        "Specialization in .Net and Angular",
+        "Attend daily SCRUM and implement changes",
+        "Recommend fixes and refactoring in existing codebase",
+        "Lift & shift existing systems to Azure Cloud"
+    ],
+    "responsibilities": [
+
+    ],
+    "skills": ["Azure AAD", "Angular", ".NET"]
+},
+{
+    "workplace": "Ambitious Developers",
+    "role": "Director",
+    "start": "2021",
+    "end": "present",
+    "summery": "Codification helps to build entirely new cloud native platforms from the ground up, for both large and small-scale projects. I have joined Codification on a part-time basis to support projects with narrow deadlines.",
+    "work": [
+        "Specialization in .Net and Angular",
+        "Attend daily SCRUM and implement changes",
+        "Recommend fixes and refactoring in existing codebase",
+        "Lift & shift existing systems to Azure Cloud"
+    ],
+    "responsibilities": [
+
+    ],
+    "skills": ["Azure AAD", "Angular", ".NET"]
+}]

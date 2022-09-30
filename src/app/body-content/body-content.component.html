@@ -1,0 +1,48 @@
+<div class="container mt-3">
+  <!-- Summery content -->
+  <div *ngIf="type === page.SUMMERY">
+    <div class="row">
+      <div class="col-md-4 col-xs-12 center">
+        <img src="../assets/image.png" class="img-thumbnail img-profile" />
+        <h3>{{ jobTitle }}</h3>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <p class="text-summery mb-4">{{ summery }}</p>
+        <mat-card *ngIf="accomplishments" class="mb-4">
+          <mat-card-header>
+            <mat-card-title>Accomplishments</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <ul>
+              <li *ngFor="let item of accomplishments">{{ item }}</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-4">
+          <mat-card-header>
+            <mat-card-title>Skills</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-chip-list aria-label="Fish selection">
+              <app-skill
+                *ngFor="let skill of skills"
+                [title]="skill"
+              ></app-skill>
+            </mat-chip-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <!-- loading from default json template -->
+  <ng-container *ngIf="type === page.EXPERIANCE">
+    <app-experiance *ngIf="showTemplate"></app-experiance>
+  </ng-container>
+  <!-- loading from specified markdown file -->
+  <div *ngIf="!showTemplate">
+    <div *ngIf="markdownContent$ | async as markdownContent">
+      <markdown [data]="markdownContent" (ready)="markdownReady()"> </markdown>
+    </div>
+  </div>
+</div>
+<!-- ++{{ showTemplate }}++ ={{ type }}={{ page.SUMMERY }}= -->

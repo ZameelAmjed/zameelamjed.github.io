@@ -1,0 +1,76 @@
+<div>
+  <ng-container *ngIf="experiance$ | async as experiance; else loading">
+    <mat-stepper orientation="vertical" class="profile-stepper">
+      <!-- Override number/edit icon -->
+      <ng-template matStepperIcon="edit"></ng-template>
+      <ng-template matStepperIcon="number"></ng-template>
+
+      <!-- Experiance display in stepper -->
+
+      <ng-container *ngFor="let item of experiance; let i = index">
+        <mat-step [state]="item.workplace">
+          <ng-template matStepLabel>
+            <p class="title-heading p-0 m-0">{{ item.workplace }}</p>
+            <p class="p-0 m-0">
+              <small
+                ><span *ngIf="item.start"
+                  >{{ item.start }} - {{ item.end }} | </span
+                >{{ item.role }}</small
+              >
+            </p>
+          </ng-template>
+          <ng-template matStepContent>
+            <p>{{ item.summery }}</p>
+            <!-- Work section -->
+            <div *ngIf="item.work && item.work.length > 0">
+              <h3 class="mat-subheading-2">Work</h3>
+              <ul>
+                <li *ngFor="let work of item.work">{{ work }}</li>
+              </ul>
+            </div>
+            <!-- Responsibilities section -->
+            <div
+              *ngIf="item.responsibilities && item.responsibilities.length > 0"
+            >
+              <h3 class="mat-subheading-2">Responsibilities</h3>
+              <ul>
+                <li *ngFor="let responsibility of item.responsibilities">
+                  {{ responsibility }}
+                </li>
+              </ul>
+            </div>
+            <!-- Skills section -->
+            <div class="mini-badges">
+              <app-skill
+                *ngFor="let skill of item.skills"
+                [title]="skill"
+              ></app-skill>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="mt-2">
+              <button
+                mat-stroked-button
+                *ngIf="experiance.length - 1 > i"
+                matStepperNext
+              >
+                Next
+              </button>
+              <button
+                mat-stroked-button
+                *ngIf="experiance.length - 1 === i"
+                matStepperPrevious
+              >
+                Previous
+              </button>
+            </div>
+          </ng-template>
+        </mat-step>
+      </ng-container>
+    </mat-stepper>
+  </ng-container>
+  <ng-template #loading>
+    <div class="d-flex justify-content-center">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
+</div>

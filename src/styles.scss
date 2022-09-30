@@ -1,1 +1,90 @@
+
+
+
+
+//@include
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$cv-primary: mat.define-palette(mat.$indigo-palette);
+$cv-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$cv-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$cv-theme: mat.define-light-theme((
+  color: (
+    primary: $cv-primary,
+    accent: $cv-accent,
+    warn: $cv-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($cv-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "bootstrap/scss/bootstrap-grid.scss";
+@import "bootstrap/scss/_mixins.scss";
+@import "bootstrap/scss/_images.scss";
+@import "bootstrap/scss/_utilities.scss";
+$thumbnail-padding: 1rem;
+
+.img-profile{
+  width: 250px;
+  height: 250px;
+  padding: .50rem;
+  border-radius: 50%;
+}
+$color-gray: #9c9c9c71;
+
+.text-summery{
+  font-size: large;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 16.0.0  SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='#{$color-gray}' x='0px' y='0px' width='349.078px' height='349.078px' viewBox='0 0 349.078 349.078' style='enable-background:new 0 0 349.078 349.078%3B' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M198.779 322.441v-58.245c0-7.903 6.406-14.304 14.304-14.304c28.183 0 43.515-28.904 45.643-85.961h-45.643c-7.897 0-14.304-6.41-14.304-14.304V26.64c0-7.9 6.406-14.301 14.304-14.301h121.69c7.896 0 14.305 6.408 14.305 14.301v122.988c0 27.349-2.761 52.446-8.181 74.611c-5.568 22.722-14.115 42.587-25.398 59.049c-11.604 16.917-26.132 30.192-43.155 39.437c-17.152 9.304-37.09 14.026-59.267 14.026C205.186 336.745 198.779 330.338 198.779 322.441z M14.301 249.887C6.404 249.887 0 256.293 0 264.185v58.257c0 7.896 6.404 14.298 14.301 14.298c22.166 0 42.114-4.723 59.255-14.026c17.032-9.244 31.558-22.508 43.161-39.437c11.29-16.462 19.836-36.328 25.404-59.061c5.423-22.165 8.178-47.263 8.178-74.6V26.628c0-7.9-6.41-14.301-14.304-14.301H14.301C6.404 12.327 0 18.734 0 26.628v122.988c0 7.899 6.404 14.304 14.301 14.304h45.002C57.201 220.982 42.09 249.887 14.301 249.887z'/%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.title{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.center{
+  text-align: center !important;
+}
+.title-heading{
+  font-size: large;
+}
+.mini-badges{
+  .mat-standard-chip{
+    padding: 2px 4px;
+    font-size: smaller;
+    min-height: 26px;
+  }
+  .mat-chip{
+    margin-right: 5px;
+  }
+}
+.profile-stepper{
+  background-color: transparent;
+}
