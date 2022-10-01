@@ -10,7 +10,40 @@
         "Javascript",
         "PHP",
         "Laravel",
-        "Github"
+        "Github",
+        "Git",
+        "CVS",
+        "Kanban",
+        "Trello",
+        "Google Cloud Platform",
+        "Firebase",
+        "Mongo Atlas",
+        "Typescript",
+        "Vue",
+        "Angular",
+        "Chrome Apps",
+        "PHP",
+        "C#",
+        "Java",
+        "Laravel",
+        "Codeigniter",
+        "Kohana",
+        "Yii",
+        "MYSQL",
+        "ORACLE",
+        "SQL server",
+        "Vue PWA",
+        "Android Native",
+        "Hybrid App Development",
+        "Ionic",
+        "Node.js",
+        "Python",
+        "Bash",
+        "PowerShell",
+        "Wordpress",
+        "Linux",
+        "Adobe XD",
+        "Illustrator"
     ],
     "sections": [
         {
@@ -22,6 +55,11 @@
             "name": "projects",
             "icon": "icon",
             "markdown_file": "assets/content/projects.md"
+        },
+        {
+            "name": "contact",
+            "icon": "icon",
+            "markdown_file": "assets/content/contact.md"
         }
     ]
 }

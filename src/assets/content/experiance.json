@@ -35,5 +35,46 @@
         "Representing business in local conventions and meeting potential clients.",
         "Contracting with advertising agencies to produce innovative products."
     ],
-    "skills": ["Codeigniter", "PHP", "Angular","wordpress"]
-}]
+    "skills": ["Codeigniter", "PHP", "Angular","Wordpress","Android Development","Google Cloud Platform"]
+},
+{
+    "workplace": "Pixecom (Pvt) Ltd",
+    "role": "Technoprenuer",
+    "start": "2014",
+    "end": "2017",
+    "summery": "I have joined Pixecom (Pvt) Ltd as an associate developer and gradually promoted to senior positions as I was able to fully take over the project left by the previous development team and lead it towards achieving excellence",
+    "work": [
+        "Development of Pixecom CRM and setup to run operation of call centre",
+        "Product Developer of Bookprices.lk (Web & App), lets you search for any type of book and make it delivered to doorstep",
+        "Re-archicect the freamwork of marketplace software to sell used books",
+        "Develop management platform for staff"
+    ],
+    "responsibilities": [
+        "Manage multiple in-house development projects with liaising customer requirement",
+        "Engaging with top management to develop innovative and competitive software products",
+        "Manage work of developers and other IT staff",
+        "Change and make the systems adopt ever changing business case",
+        "Run tests on live system"
+    ],
+    "skills": ["Codeigniter", "Kohana", "Angular","IP PBX",".NET","SCRUM","Trello"]
+},
+{
+    "workplace": "Clicqd",
+    "role": "Software Engineer",
+    "start": "2012",
+    "end": "2014",
+    "summery": "During undergraduate studies, I have worked with peer colleagues with different skills in developing promotional websites and marketing content for local businesses",
+    "work": [
+        "Development of Hotel Management System",
+        "Camping forum for UK travel agent",
+        "Development of windows standalone apps for multiple clients",
+        "Setup CMS, Magento E-Commerce Website",
+        "Design UI & LOGO for clients"
+    ],
+    "responsibilities": [
+        "Develop systems according to the requirements",
+        "Communicate with team members and clients to laise with requirements"
+    ],
+    "skills": [".NET", "Silverlight", "Flash","","PHP","Smarty","Action Script"]
+}
+]
