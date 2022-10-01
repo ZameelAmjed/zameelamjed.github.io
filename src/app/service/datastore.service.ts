@@ -1,4 +1,3 @@
-import * as data from 'src/assets/profile.json';
 import { IContent, IExperiance, IPageData } from '../modules/common';
 import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';

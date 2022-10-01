@@ -1,27 +1,40 @@
-# Cv
+# Online Protofolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Customizable webpage to present your protofolio online. You can use this template and change the contents in JSON files and upload in your own webspace to host a web protofolio of yours.
 
-## Development server
+You can host this webpage on Github pages, Azure Static Web App or Google Firebase Standalone Website under your name.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+If you need to change the content often consider storing JSON files in storages like https://www.npoint.io/ and making API call.
 
-## Code scaffolding
+This project was developped using Angular.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation Guide
+1. Clone this project from Git Repository
 
-## Build
+`git clone https://github.com/ZameelAmjed/zameelamjed.github.io.git`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Run ``npm install`` to install dependancies.
 
-## Running unit tests
+3. Replace the variables in environment.prod.ts file accordingly.
+    name:'Your name',
+    apiExperiance:'/assets/experiance_sample.json',
+    apiProfile: '/assets/profile_sample.json'
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. Edit profile_sample.json file in the assets folder. (if you are planning to use third party API to store JSON file copy the content and paste it in API prvider, edit and change the address in apiProfile of environment.prod.ts)
 
-## Running end-to-end tests
+5. Edit experiance_sample.json file in assets folder. If you are planning to use a markdown file to list your experiance, update the markdown file location in experiance section of profile_sample.json file.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+6. You can add multiple sections to this protofolio. To add a new section update the section array in the profile_sample.json file, use a markdown file to display content relevent to your new section.
 
-## Further help
+e.g.
+"sections": [
+     ...
+        {
+            "name": "projects",
+            "icon": "icon",
+            "markdown_file": "assets/content/projects_sample.md"
+        }
+    ]
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+7. Once you are ok with the content. run ``ng build`` to build and get the profile website up and ready in docs folder. You can use this folder to host static website in github pages or any web server.
+

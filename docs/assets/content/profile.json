@@ -22,11 +22,6 @@
             "name": "projects",
             "icon": "icon",
             "markdown_file": "assets/content/projects.md"
-        },
-        {
-            "name": "projects",
-            "icon": "icon",
-            "markdown_file": ""
         }
     ]
 }

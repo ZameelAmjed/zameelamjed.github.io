@@ -24,6 +24,7 @@ export class BodyContentComponent implements OnInit, OnDestroy {
   skills: string[] = [];
   faTwitter = faTwitter;
   jobTitle: string = '';
+  profileImage: string = '';
   accomplishments:string[]|null = null;
   markdownContent$: Observable<string|null>;
   subscription;
@@ -39,6 +40,7 @@ export class BodyContentComponent implements OnInit, OnDestroy {
           this.skills = datastore.getSkills();
           this.jobTitle = datastore.getJobTitle();
           this.accomplishments = datastore.getAccomplishments();
+          this.profileImage = datastore.getImage();
         }
         );
      
