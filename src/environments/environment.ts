@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   name:'Your Name Goes Here',
-  apiExperiance:'/assets/content/experiance_sample.json',
-  apiProfile: '/assets/content/profile_sample.json'
+  apiExperiance:'/assets/content/experiance.json',
+  apiProfile: '/assets/content/profile.json'
 };
 
 /*

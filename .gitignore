@@ -1,6 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-#My Settings files
+# My Settings files
 /src/assets/content/experiance.json
 /src/assets/content/profile.json
 /src/assets/content/projects.md
