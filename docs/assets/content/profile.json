@@ -54,7 +54,12 @@
         {
             "name": "projects",
             "icon": "icon",
-            "markdown_file": "assets/content/projects.md"
+            "markdown_file": "https://gist.githubusercontent.com/ZameelAmjed/94db3813462fe9ad5e7a6066f68a2707/raw/5b3bda049dddd8ef17e3800ebaabf7e935ac3337/projects.md"
+        },
+        {
+            "name": "contact",
+            "icon": "icon",
+            "markdown_file": "https://gist.githubusercontent.com/ZameelAmjed/94db3813462fe9ad5e7a6066f68a2707/raw/5b3bda049dddd8ef17e3800ebaabf7e935ac3337/contact.md"
         }
     ]
 }

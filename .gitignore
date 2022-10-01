@@ -5,6 +5,7 @@
 /src/assets/content/profile.json
 /src/assets/content/projects.md
 /src/assets/content/contact.md
+/src/environments/environment.prod.ts
 
 # Compiled output
 /dist
