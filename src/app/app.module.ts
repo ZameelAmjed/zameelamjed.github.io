@@ -14,6 +14,7 @@ import { StoreModule } from '@ngrx/store';
 import { DatastoreEffects } from './state/datastore.effects';
 import { EffectsModule } from '@ngrx/effects';
 import { MarkdownModule } from 'ngx-markdown';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,5 +38,6 @@ import { MarkdownModule } from 'ngx-markdown';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { 
 }

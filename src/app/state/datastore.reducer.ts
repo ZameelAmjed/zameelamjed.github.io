@@ -1,5 +1,3 @@
-import { IExperiance } from '../modules/common';
-
 import { DatastoreActions } from './datastore.action';
 import { DatastoreActionType } from './datastore.action.type';
 

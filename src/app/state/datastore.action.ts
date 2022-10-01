@@ -15,12 +15,13 @@ export class initData implements Action{
   readonly type = DatastoreActionType.INIT_DATA;
 }
 
-//ACTION 
+//ACTION set Markdown from api
 export class setMarkdown implements Action{
   readonly type = DatastoreActionType.SET_MARKDOWN;
   constructor(public markdownContent:string){}
 }
 
+//ACTION call for Markdown from state
 export class getMarkdown implements Action{
   readonly type = DatastoreActionType.GET_MARKDOWN;
   constructor(){}

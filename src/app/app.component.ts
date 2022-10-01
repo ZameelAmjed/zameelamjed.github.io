@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent  implements OnDestroy{
   profileContent: IContent[] = [];
   subscription: Subscription;

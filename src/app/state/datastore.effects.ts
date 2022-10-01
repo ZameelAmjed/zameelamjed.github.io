@@ -27,46 +27,43 @@ export class DatastoreEffects {
   //EFFECT fetch data from server if state variable is empty
   $effectsInitData: Observable<Action> = createEffect(() =>
     this.actions$.pipe(
-      ofType<DatastoreActions.initData>(
-        DatastoreActionType.INIT_DATA
-      ),
+      ofType<DatastoreActions.initData>(DatastoreActionType.INIT_DATA),
       withLatestFrom(this.store.select(selectExperiance)),
       filter(([payload, latest]) => {
-        return (!latest)?true:false;
+        return !latest ? true : false;
       }),
       debounceTime(5000),
       switchMap(([payload, latest]) => {
         //empty selector value so make api call
         return this.datastore.apiExperiance().pipe(
-          map(data=>data as IExperiance[]),
-          switchMap((data)=>{
+          map((data) => data as IExperiance[]),
+          switchMap((data) => {
             return of(new DatastoreActions.setExperiance(data));
-          }),catchError((error)=>{
-            throw new Error("not fetched from API");
+          }),
+          catchError((error) => {
+            throw new Error('not fetched from API');
           })
-        )
+        );
       })
     )
   );
 
   $effectssetMarkdown: Observable<Action> = createEffect(() =>
-  this.actions$.pipe(
-    ofType<DatastoreActions.getMarkdown>(
-      DatastoreActionType.GET_MARKDOWN
-    ),
-    switchMap((payload) => {
-      //empty selector value so make api call
-      return this.datastore.apiMarkdown().pipe(
-        switchMap((data)=>{
-          console.log(data);
-          return of(new DatastoreActions.setMarkdown(data));
-        }),catchError((error)=>{
-          console.log(error)
-          throw new Error("not fetched from API");
-        })
-      );
-    })
-  )
-);
-
+    this.actions$.pipe(
+      ofType<DatastoreActions.getMarkdown>(DatastoreActionType.GET_MARKDOWN),
+      switchMap((payload) => {
+        //empty selector value so make api call
+        return this.datastore.apiMarkdown().pipe(
+          switchMap((data) => {
+            console.log(data);
+            return of(new DatastoreActions.setMarkdown(data));
+          }),
+          catchError((error) => {
+            console.log(error);
+            throw new Error('not fetched from API');
+          })
+        );
+      })
+    )
+  );
 }
