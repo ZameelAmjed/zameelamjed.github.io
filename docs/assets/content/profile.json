@@ -1,49 +1,21 @@
 {
-    "summery": "A self-motivated Software Project Manager with experience in developing market-place software and managing software development projects. And involved in building IT infrastructure for local businesses to have an edge on technology to increase productivity and sales",
-    "job_title": "Senior Software Engineer",
-    "image": "https://media-exp1.licdn.com/dms/image/C5103AQGs3M-Z17I4ng/profile-displayphoto-shrink_800_800/0/1563332275088?e=1669852800&v=beta&t=s81NB4ExXzcK3VR7X9jxq_sRlsanzzBKre-hyOh3ONQ",
+    "summery": "Likable and dedicated IT consultant with over 5 years of experience in a fast-paced fin-tech company. Eager to offer superb analytical and computer skills to help ABC Inc grow its client base. In previous roles recognized for top company-wide quality satisfaction rating (over 99%). Also, reduced client wait time by 20% and boosted client satisfaction ratings by more than 40% in a single quarter.",
+    "job_title": "IT Consultant",
+    "image": "assets/profile_pic.png",
     "accomplishments": [
-        "Batch Top - B.Sc (Hons) Software Development",
-        "Best Website Award - SriLanka & Tamil Nadu"
+        "B.Sc (Hons) Computer Science - 2.5 GPA",
+        "Oracle Cloud Platform Digital Assistant Certified Professional",
+        "Java EE 7 Application Developer"
     ],
     "skills": [
-        "Javascript",
+        "Java",
+        "Typescript",
         "PHP",
         "Laravel",
         "Github",
-        "Git",
-        "CVS",
-        "Kanban",
-        "Trello",
-        "Google Cloud Platform",
-        "Firebase",
-        "Mongo Atlas",
-        "Typescript",
-        "Vue",
-        "Angular",
-        "Chrome Apps",
-        "PHP",
-        "C#",
-        "Java",
-        "Laravel",
-        "Codeigniter",
-        "Kohana",
-        "Yii",
-        "MYSQL",
-        "ORACLE",
-        "SQL server",
-        "Vue PWA",
-        "Android Native",
-        "Hybrid App Development",
-        "Ionic",
-        "Node.js",
         "Python",
-        "Bash",
-        "PowerShell",
-        "Wordpress",
-        "Linux",
-        "Adobe XD",
-        "Illustrator"
+        "Node",
+        "Linux"
     ],
     "sections": [
         {
@@ -54,12 +26,7 @@
         {
             "name": "projects",
             "icon": "icon",
-            "markdown_file": "https://gist.githubusercontent.com/ZameelAmjed/94db3813462fe9ad5e7a6066f68a2707/raw/5b3bda049dddd8ef17e3800ebaabf7e935ac3337/projects.md"
-        },
-        {
-            "name": "contact",
-            "icon": "icon",
-            "markdown_file": "https://gist.githubusercontent.com/ZameelAmjed/94db3813462fe9ad5e7a6066f68a2707/raw/5b3bda049dddd8ef17e3800ebaabf7e935ac3337/contact.md"
+            "markdown_file": "assets/content/projects.md"
         }
     ]
 }
