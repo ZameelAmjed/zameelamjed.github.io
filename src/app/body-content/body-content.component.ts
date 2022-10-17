@@ -3,7 +3,6 @@ import {
   Input,
   OnDestroy,
   OnInit,
-  SimpleChanges,
 } from '@angular/core';
 import { PageModel } from '../modules/pageModel';
 import { Datastore } from '../service/datastore.service';
@@ -28,13 +27,14 @@ export class BodyContentComponent implements OnInit, OnDestroy {
   profileImage: string = '';
   accomplishments: string[] | null = null;
   markdownContent$: Observable<string | null>;
+  imageIsLoading:{visibility:string} = { visibility:'hidden' };
   subscription;
 
   constructor(datastore: Datastore, private store: Store) {
     this.type = '';
     this.page = new PageModel();
     this.showTemplate = false;
-
+    
     this.subscription = datastore.profileContent$.subscribe((content) => {
       this.summery = content.summery;
       this.skills = datastore.getSkills();
@@ -60,4 +60,5 @@ export class BodyContentComponent implements OnInit, OnDestroy {
   markdownReady() {
     console.log('Markdown');
   }
+
 }
